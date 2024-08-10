@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "testaovelocidade",
-    "slug": "testaovelocidade",
+    "name": "MyNewApp",
+    "slug": "MyNewApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,13 +12,19 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rafaelneves1991.MyNewApp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We need access to your location to show your position on the map.",
+        "NSLocationAlwaysUsageDescription": "We need access to your location to provide location-based services even when the app is in the background."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rafaelneves1991.MyNewApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
