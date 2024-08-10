@@ -17,6 +17,10 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const navigation = useNavigation();
 
+  const handleGoToGeolocation = () => {
+    navigation.navigate('Geolocation');
+  };
+
   const renderItem: ListRenderItem<Car> = ({ item }) => (
     <View style={styles.itemContainer}>
       <Image source={{ uri: item.image }} style={styles.image} />
@@ -39,6 +43,9 @@ export default function Home() {
 
   return (
     <View>
+      <View>
+        <Button title="Geolocalização" onPress={handleGoToGeolocation}/>
+      </View>
       <Text style={styles.sectionTitle}>Carros</Text>
       <FlatList
         data={data}

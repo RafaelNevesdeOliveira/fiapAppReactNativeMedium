@@ -4,6 +4,7 @@ import Home from "./src/Home";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Header from "./src/components/Header";
 import Footer from "./src/components/Footer";
+import Geolocalizacao from "./src/Geolocation";
 
 const StackNavigation = createNativeStackNavigator();
 
@@ -15,7 +16,15 @@ export default function App() {
           name="Home"
           component={Home}
           options={({ navigation }) => ({
-            header: () => <Header title="Home" onMenuPress={() => {}}/>,
+            header: () => <Header title="Home" onMenuPress={() => {}} />,
+          })}
+        />
+        <StackNavigation.Screen 
+          name="Geolocation" 
+          component={Geolocalizacao} 
+          options={({ navigation }) => ({
+            header: () => <Header title="Geolocalização" onMenuPress={() => {}} canGoBack={navigation.canGoBack()} />,
+            footer: () => <Footer navigation={navigation} />,
           })}
         />
       </StackNavigation.Navigator>
