@@ -5,13 +5,19 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Header from "./src/components/Header";
 import Footer from "./src/components/Footer";
 import Geolocalizacao from "./src/Geolocation";
+import Login from "./src/Login";
 
 const StackNavigation = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigation.Navigator initialRouteName="Home">
+      <StackNavigation.Navigator initialRouteName="Login">
+      <StackNavigation.Screen 
+          name="Login" 
+          component={Login} 
+          options={{ headerShown: false }}
+        />
         <StackNavigation.Screen
           name="Home"
           component={Home}
