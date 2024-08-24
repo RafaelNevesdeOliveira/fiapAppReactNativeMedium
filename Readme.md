@@ -49,7 +49,7 @@ npx react-native run-ios || npx react-native run-android
 
 
 ### 1. Rodar o projeto
-- Executa o projeto no simulador iOS usando o React Native CLI
+- Executa o projeto no simulador iOS ou Android Studio usando o React Native CLI
 ```js
 npx react-native run-ios || npx react-native run-android
 ```
